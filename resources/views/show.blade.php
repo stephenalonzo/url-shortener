@@ -1,7 +1,7 @@
 <x-layout>
     <section class="p-4">
         <div class="mx-auto space-y-8 flex flex-col items-center justify-center md:max-w-3xl">
-            <h1 class="text-4xl font-bold">Your SimpleURL is ready!</h1>
+            <h1 class="text-4xl font-bold text-center">Your SimpleURL is ready!</h1>
             <div
                 class="p-4 rounded-md bg-gray-200 w-full space-y-3 flex flex-col items-center justify-center text-center">
                 <p class="text-gray-500">Copy the short link and share it in messages, texts, posts, websites and other
