@@ -34,12 +34,18 @@ class UrlController extends Controller
         $bytes = random_bytes(3);
         $unique_id = ucwords(bin2hex($bytes));
 
-        Url::create([
-            'url' => $validated['url'],
-            'unique_id' => $unique_id
-        ]);
+        $parsed = parse_url($validated['url'], PHP_URL_SCHEME);
 
-        return redirect('/url/shorten/')->with('unique_id', $unique_id);
+        if ($parsed === 'https') {
+            Url::create([
+                'url' => $validated['url'],
+                'unique_id' => $unique_id
+            ]);
+
+            return redirect('/url/shorten/')->with('unique_id', $unique_id);
+        }
+
+        return back()->with('error', '*Please enter a valid url');
     }
 
     public function show()

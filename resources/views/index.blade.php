@@ -14,6 +14,9 @@
                         class="px-4 py-2 rounded-tr-md rounded-br-md border border-blue-600 bg-blue-600 text-white hover:cursor-pointer hover:bg-blue-400 transition hover:border-blue-400">Shorten
                         URL</button>
                 </form>
+                @if (session()->has('error'))
+                    <p class="text-sm text-red-500">{{ session('error') }}</p>
+                @endif
                 <p class="text-gray-500">Simple URL is a free tool that shortens links, making it <i>easier</i> to
                     share.</p>
             </div>
