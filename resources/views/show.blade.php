@@ -37,10 +37,7 @@
             <div class="space-y-3 text-center">
                 <h3 class="text-2xl font-bold">It's simple and fast!</h3>
                 <p class="text-gray-500">Simple URL allows users to instantly shorten long URLs into clean, shareable
-                    links.
-                    It offers real-time tracking and analytics to monitor link performance, including clicks and traffic
-                    sources. Designed with a simple and intuitive interface, users can manage, edit, and organize their
-                    shortened links effortlessly. Whether for personal use or business marketing, our tool ensures fast,
+                    links. Whether for personal use or business marketing, our tool ensures fast,
                     reliable, and secure link shortening.</p>
             </div>
             <div class="text-center grid grid-cols-2 gap-3 w-full">
