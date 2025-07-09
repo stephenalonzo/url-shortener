@@ -9,11 +9,14 @@
                     @csrf
                     <input type="text" name="url"
                         class="px-4 py-2 rounded-tl-md rounded-bl-md bg-white border border-gray-500 md:w-96"
-                        placeholder="Enter the link here">
+                        placeholder="Enter the link here" required>
                     <button type="submit"
                         class="px-4 py-2 rounded-tr-md rounded-br-md border border-blue-600 bg-blue-600 text-white hover:cursor-pointer hover:bg-blue-400 transition hover:border-blue-400">Shorten
                         URL</button>
                 </form>
+                @error('url')
+                    <p class="text-sm text-red-500">Please enter a valid url.</p>
+                @enderror
                 @if (session()->has('error'))
                     <p class="text-sm text-red-500">{{ session('error') }}</p>
                 @endif

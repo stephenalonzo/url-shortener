@@ -45,7 +45,7 @@ class UrlController extends Controller
             return redirect('/url/shorten/')->with('unique_id', $unique_id);
         }
 
-        return back()->with('error', '*Please enter a valid url');
+        return back()->with('error', 'Please enter a valid url');
     }
 
     public function show()
